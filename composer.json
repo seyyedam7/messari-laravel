@@ -2,7 +2,6 @@
     "name": "seyyedam7/messari-laravel",
     "description": "A package to access messari apis for laravel",
     "keywords": [
-        "seyyedam7",
         "messari",
         "laravel"
     ],
