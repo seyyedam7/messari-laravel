@@ -12,7 +12,7 @@ Full API documentation could be found on [messari.io](https://messari.io/api/doc
 To get the latest version simply run the code below in your project.
 
 ```
-composer require seyyed/messari-api
+composer require seyyedam7/messari-api
 ```
 
 
