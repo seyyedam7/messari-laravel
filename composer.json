@@ -19,6 +19,11 @@
         }
     ],
     "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Seyyedam7\\Messari\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
