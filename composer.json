@@ -1,0 +1,33 @@
+{
+    "name": "seyyedam7/messari-laravel",
+    "description": "A package to access messari apis for laravel",
+    "keywords": [
+        "seyyedam7",
+        "messari",
+        "laravel"
+    ],
+    "type": "library",
+    "require": {
+        "php": "^7.3|^8.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/support": "8.x-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seyyed Ahmad Mousavi",
+            "email": "mousavi7731@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trasigor\\Messari\\MessariServiceProvider"
+            ],
+            "aliases": {
+                "Messari": "Trasigor\\Messari\\MessariFacade"
+            }
+        }
+
+    },
