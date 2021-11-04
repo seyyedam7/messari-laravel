@@ -23,10 +23,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Trasigor\\Messari\\MessariServiceProvider"
+                "Seyyedam7\\Messari\\MessariServiceProvider"
             ],
             "aliases": {
-                "Messari": "Trasigor\\Messari\\MessariFacade"
+                "Messari": "Seyyedam7\\Messari\\MessariFacade"
             }
         }
     }
