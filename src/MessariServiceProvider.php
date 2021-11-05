@@ -14,7 +14,7 @@ class MessariServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Messari', function () {
-            return new Api();
+            return new Messari();
         });
     }
 
@@ -25,6 +25,8 @@ class MessariServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../config/messari.php' => config_path('messari.php')
+        ], 'messari-config');
     }
 }
