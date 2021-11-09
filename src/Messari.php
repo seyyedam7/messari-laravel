@@ -22,14 +22,16 @@ class Messari {
         $base_url = config('messari.base_url' , 'https://data.messari.io/api');
         $url = $base_url . '/v' . $version . $url;
         $url .= empty($params) ? '' : '?'.http_build_query($params);
+        $apiKey = config('messari.api_key' , env('MESSARI_API_KEY'));
         try {
-            $http_client = new Client(['headers' => [
-                'x-messari-api-key' => config('messari.api_key' , env('MESSARI_API_KEY')),
-            ]]);
+            $client = new Client();
+            $response = $client->request($type , $url , [
+                'headers' => [
+                    'x-messari-api-key' => $apiKey,
+                ],
+            ]);
 
-            $request = $http_client->request($type, $url);
-
-            return json_decode($request->getBody()->getContents() , true);
+            return json_decode($response->getBody()->getContents() , true);
         } catch(ClientException $e) {
             return json_decode($e->getResponse()->getBody(), true);
         } catch(ConnectException $e){
